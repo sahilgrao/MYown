@@ -1,0 +1,254 @@
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git config --global user.email sahilg1947@gmail.com
+bash: $'\302\226git': command not found
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git config --global user.email sahilg1947@gmail.com
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git config --global user.name sahilgrao
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git init
+Initialized empty Git repository in C:/Users/ganes/OneDrive/Desktop/git_handson/.git/
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ sit status
+bash: sit: command not found
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git add file1.txt
+fatal: pathspec 'file1.txt' did not match any files
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git add file1
+fatal: pathspec 'file1' did not match any files
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git add file1
+fatal: pathspec 'file1' did not match any files
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git add file1.txt
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.txt
+
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git remote add origin https://github.com/sahilgrao/MYown
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git remote show origin
+fatal: unable to access 'https://github.com/sahilgrao/MYown/': Could not resolve host: github.com
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git remote show origin
+info: please complete authentication in your browser...
+* remote origin
+  Fetch URL: https://github.com/sahilgrao/MYown
+  Push  URL: https://github.com/sahilgrao/MYown
+  HEAD branch: main
+  Remote branch:
+    main new (next fetch will store in remotes/origin)
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/sahilgrao/MYown'
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/sahilgrao/MYown
+  Push  URL: https://github.com/sahilgrao/MYown
+  HEAD branch: main
+  Remote branch:
+    main new (next fetch will store in remotes/origin)
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/sahilgrao/MYown'
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git remote add origin https://github.com/sahilgrao/MYown
+error: remote origin already exists.
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/sahilgrao/MYown
+  Push  URL: https://github.com/sahilgrao/MYown
+  HEAD branch: main
+  Remote branch:
+    main new (next fetch will store in remotes/origin)
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/sahilgrao/MYown'
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ ^C
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git commit -m "initial commit"
+[master (root-commit) 6d6fc65] initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1.txt
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/sahilgrao/MYown'
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 209 bytes | 209.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/sahilgrao/MYown/pull/new/master
+remote:
+To https://github.com/sahilgrao/MYown
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git log
+commit 6d6fc6597822162a1ac8d9b6032af65b5304b746 (HEAD -> master, origin/master)
+Author: sahilgrao <sahilg1947@gmail.com>
+Date:   Fri Nov 4 09:08:46 2022 +0530
+
+    initial commit
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git help
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git branch rand
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git branch
+* master
+  rand
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git checkout rand
+Switched to branch 'rand'
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (rand)
+$ git status
+On branch rand
+nothing to commit, working tree clean
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (rand)
+$ git add file2.txt
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (rand)
+$ git commit -m "added file2"
+[rand e552278] added file2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file2.txt
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (rand)
+$ git push -u origin rand
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 235 bytes | 235.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'rand' on GitHub by visiting:
+remote:      https://github.com/sahilgrao/MYown/pull/new/rand
+remote:
+To https://github.com/sahilgrao/MYown
+ * [new branch]      rand -> rand
+branch 'rand' set up to track 'origin/rand'.
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (rand)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git merge rand
+Updating 6d6fc65..e552278
+Fast-forward
+ file2.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file2.txt
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$ git push -u origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sahilgrao/MYown
+   6d6fc65..e552278  master -> master
+branch 'master' set up to track 'origin/master'.
+
+ganes@Sals-Machine MINGW64 ~/OneDrive/Desktop/git_handson (master)
+$
